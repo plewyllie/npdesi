@@ -12,6 +12,8 @@ if __name__ == "__main__":
     }
 
     commands = ['vlan 150', 'exit', 'interface Eth2/5', 'switchport', 'switchport access vlan 150']
+    
+    commands = " ; ".join(commands)
 
     payload = {
         "ins_api": {
