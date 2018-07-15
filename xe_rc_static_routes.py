@@ -46,7 +46,7 @@ if __name__ == "__main__":
         }
     }
 
-    response = requests.post(url, data=routes_to_add, verify=False, headers=headers, auth=auth)
+    response = requests.post(url, data=json.dumps(routes_to_add), verify=False, headers=headers, auth=auth)
 
     print 'Status Code: ' + str(response.status_code)
     if response.text:
