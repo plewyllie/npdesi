@@ -23,11 +23,13 @@ if __name__ == "__main__":
                    <address>10.23.23.1</address>
                    <netmask>255.255.255.0</netmask>
                   </primary>
+                  <secondaries>
+                   <secondary>
+                    <address>20.32.32.1</address>
+                    <netmask>255.255.255.0</address>
+                   </secondary>
+                  </secondaries> 
                  </addresses>
-                 <secondary>
-                  <address>20.32.32.1</address>
-                  <netmask>255.255.255.0</address>
-                 </secondary>
                 </ipv4-network>
                </interface-configuration>
               </interface-configurations>
