@@ -23,7 +23,12 @@ if __name__ == "__main__":
                             <mask>255.255.255.0</mask>
                         </primary>
                         <secondary>
-                            <address>11.11.11.11</address>
+                            <address>9.9.9.9</address>
+                            <mask>255.255.255.0</mask>
+                            <secondary/>
+                        </secondary>
+                        <secondary>
+                            <address>11.11.11.1</address>
                             <mask>255.255.255.0</mask>
                             <secondary/>
                         </secondary>
