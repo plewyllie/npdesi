@@ -19,7 +19,6 @@ if __name__ == '__main__':
         print nc_get_reply.xml
 
         ns_map = {'mod': 'http://www.cisco.com/nxos:1.0:sysmgrcli'}
-        print nc_get_reply.data_ele
         xml_rsp_cid = nc_get_reply.data_ele.find('.//mod:chassis_id', ns_map)
         cid_value = xml_rsp_cid.text
 
