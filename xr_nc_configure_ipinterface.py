@@ -15,8 +15,7 @@ if __name__ == "__main__":
               <interface-configurations xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg">
                <interface-configuration>
                 <active>act</active>
-                <interface-name>Loopback100</interface-name>
-                <interface-virtual/>
+                <interface-name>GigabitEthernet0/0/0/0</interface-name>
                 <ipv4-network xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-io-cfg">
                  <addresses>
                   <primary>
@@ -28,7 +27,7 @@ if __name__ == "__main__":
                     <address>20.32.32.1</address>
                     <netmask>255.255.255.0</address>
                    </secondary>
-                  </secondaries> 
+                  </secondaries>
                  </addresses>
                 </ipv4-network>
                </interface-configuration>
