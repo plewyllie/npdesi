@@ -11,11 +11,13 @@ if __name__ == "__main__":
 
 
         nc_filter = """
+             <show>
               <interface-configurations xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg">
                <interface-configuration>
                 <interface-name>Loopback100</interface-name>
                </interface-configuration>
               </interface-configurations>
+             </show>
         """
 
         nc_reply = device.get(nc_filter)
