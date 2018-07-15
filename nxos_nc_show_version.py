@@ -16,7 +16,7 @@ if __name__ == '__main__':
                       """
         nc_get_reply = device.get(('subtree', get_filter))
         print 'Response as XML String: '
-        print nc_get_reply
+        print nc_get_reply.xml
 
         ns_map = {'mod': 'http://www.cisco.com/nxos:1.0:vdc_mgr'}
         xml_rsp_cid = nc_get_reply.data_ele.find('.//mod:chassis_id', ns_map)
@@ -26,4 +26,3 @@ if __name__ == '__main__':
         print '================================='
         print 'Chassis ID: ', cid_value
         print 'Software Version: ', sw_value
-
