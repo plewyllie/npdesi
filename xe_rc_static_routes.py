@@ -46,9 +46,7 @@ if __name__ == "__main__":
         }
     }
 
-    print json.dumps(routes_to_add, indent=2)
-
-    response = requests.post(url, data=json.dumps(routes_to_add), verify=False, headers=headers, auth=auth)
+    response = requests.patch(url, data=json.dumps(routes_to_add), verify=False, headers=headers, auth=auth)
 
     print 'Status Code: ' + str(response.status_code)
     if response.text:
