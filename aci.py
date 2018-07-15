@@ -9,6 +9,6 @@ headers = {
     'postman-token': "91b8b646-6a08-d6f0-41fb-8cdf4c245579"
     }
 
-response = requests.request("POST", url, data=payload, headers=headers)
+response = requests.request("POST", url, data=payload, verify=false, headers=headers)
 
 print(response.text)
