@@ -21,6 +21,6 @@ headers = {
     'cache-control': "no-cache",
     }
 
-response = requests.request("POST", url, data=payload, verify=False, headers=headers)
+response = requests.request("POST", url, data=payload, cookie=response.cookie, verify=False, headers=headers)
 
 print(response.text)
