@@ -66,4 +66,4 @@ if __name__ == "__main__":
     #print 'Status Code: ' + str(response.status_code)
     if response.text:
         parse = json.loads(response.text)
-        print json.dumps(parse, indent=4)
+        #print json.dumps(parse, indent=4)
