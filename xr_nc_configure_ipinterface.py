@@ -20,9 +20,13 @@ if __name__ == "__main__":
                 <ipv4-network xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-io-cfg">
                  <addresses>
                   <primary>
-                   <address>100.100.1.1</address>
+                   <address>10.23.23.1</address>
                    <netmask>255.255.255.0</netmask>
                   </primary>
+                  <secondary>
+                   <address>20.32.32.1</address>
+                   <netmask>255.255.255.0</address>
+                  </secondary>
                  </addresses>
                 </ipv4-network>
                </interface-configuration>
@@ -33,4 +37,3 @@ if __name__ == "__main__":
         nc_reply = device.edit_config(target='candidate', config=nc_filter)
         print nc_reply
         device.commit()
-
