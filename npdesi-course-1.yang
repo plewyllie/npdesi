@@ -4,6 +4,7 @@ module npdesi-course {
   organization "Cisco Inc.";
   contact "chuck@npdesi.cisco.com";
   description "Here is a module that is used for basic switch configuration";
+
   revision 2018-07-15 {
     description "Initial Revision";
     reference "NPDESI COURSE MODULE";
@@ -20,10 +21,11 @@ module npdesi-course {
       description "dns server";
     }
   }
+
   container vlans {
     description "vlans container";
     list vlan {
-      key "vlanid";
+      key vlanid;
       description "vlan list";
       leaf vlanid {
         type uint16 {
