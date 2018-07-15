@@ -20,5 +20,5 @@ if __name__ == "__main__":
              </show>
         """
 
-        nc_reply = device.get(nc_filter)
+        nc_reply = device.get(('subtree', nc_filter))
         print nc_reply
