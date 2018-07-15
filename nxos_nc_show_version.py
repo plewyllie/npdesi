@@ -10,8 +10,8 @@ if __name__ == '__main__':
 
         get_filter = """
                       <show>
-                        <hostname>
-                        </hostname>
+                        <version>
+                        </verison>
                       </show>
                       """
         nc_get_reply = device.get(('subtree', get_filter))
@@ -19,9 +19,10 @@ if __name__ == '__main__':
         print nc_get_reply.xml
 
         ns_map = {'mod': 'http://www.cisco.com/nxos:1.0:vdc_mgr'}
-        xml_rsp_cid = nc_get_reply.data_ele.find('.//mod:hostname', ns_map)
+        print nc_get_reply.data_ele
+        xml_rsp_cid = nc_get_reply.data_ele.find('.//mod:chassis_id', ns_map)
         cid_value = xml_rsp_cid.text
-        print cid_value
+
         xml_rsp_sw = nc_get_reply.data_ele.find('.//mod:sys_ver_str', ns_map)
         sw_value = xml_rsp_sw.text
         print '================================='
