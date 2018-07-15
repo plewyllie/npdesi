@@ -1,3 +1,40 @@
-module npdesi-course.yang {
-  namespace 
+module npdesi-course {
+  namespace "http://npdesi.cisco.com/training";
+  prefix "npdesi";
+  organization "Cisco Inc.";
+  contact "chuck@npdesi.cisco.com";
+  description "Here is a module that is used for basic switch configuration";
+  revision 2018-07-15 {
+    description "Initial Revision";
+    reference "NPDESI COURSE MODULE";
+  }
+
+  container system {
+    description "system container";
+    leaf hostname {
+      type string;
+      description "hostname";
+    }
+    leaf-list dns-servers {
+      type string;
+      description "dns server";
+    }
+  }
+  container vlans {
+    description "vlans container";
+    list vlan {
+      key "vlanid";
+      description "vlan list";
+      leaf vlanid {
+        type uint16 {
+          range "1 .. 4096";
+        }
+        description "vlan id";
+      }
+      leaf name {
+        type string;
+        description "vlan name";
+      }
+    }
+  }
 }
