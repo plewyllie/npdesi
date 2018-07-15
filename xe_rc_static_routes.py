@@ -31,7 +31,7 @@ if __name__ == "__main__":
     print 'API Call #2 - ADD ROUTES'
     print '-----------'
 
-    url = 'http://csr1kv/restconf/api/config/native/route'
+    url = 'http://csr1kv/restconf/api/config/native/ip/route'
 
     route = collections.OrderedDict()
 
@@ -65,5 +65,3 @@ if __name__ == "__main__":
     if response.text:
         parse = json.loads(response.text)
         print json.dumps(parse, indent=4)
-
-
