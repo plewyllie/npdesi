@@ -39,12 +39,15 @@ if __name__ == "__main__":
 
         get_filter = """
             <native xmlns="http://cisco.com/ns/yang/ned/ios">
-                INSERT CORRECT
-                FILTER HERE
+                <interface>
+                 <Loopback>
+                  <name>200</name>
+                 </Loopback>
+                </interface>
             </native>
         """
 
         # UNCOMMENT THE NEXT TWO LINES FOR THE LAB AFTER YOU
         # GET THE NEW SECONDARY IP WORKING
-        # nc_get_reply = device.get(('subtree', get_filter))
-        # print etree.tostring(nc_get_reply.data_ele, pretty_print=True)
+        nc_get_reply = device.get(('subtree', get_filter))
+        print etree.tostring(nc_get_reply.data_ele, pretty_print=True)
