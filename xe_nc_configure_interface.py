@@ -23,7 +23,7 @@ if __name__ == "__main__":
                             <mask>255.255.255.0</mask>
                         </primary>
                         <secondary>
-                            <address>9.9.9.9</address>
+                            <address>11.11.11.11</address>
                             <mask>255.255.255.0</mask>
                             <secondary/>
                         </secondary>
@@ -48,4 +48,3 @@ if __name__ == "__main__":
         # GET THE NEW SECONDARY IP WORKING
         # nc_get_reply = device.get(('subtree', get_filter))
         # print etree.tostring(nc_get_reply.data_ele, pretty_print=True)
-
