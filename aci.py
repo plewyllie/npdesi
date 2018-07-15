@@ -1,4 +1,5 @@
 import requests
+requests.packages.urllib3.disable_warnings()
 
 url = "https://apic/api/aaaLogin.json"
 
@@ -10,5 +11,7 @@ headers = {
     }
 
 response = requests.request("POST", url, data=payload, verify=False, headers=headers)
+
+
 
 print(response.text)
