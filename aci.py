@@ -13,6 +13,8 @@ response = requests.request("POST", url, data=payload, verify=False, headers=hea
 
 print(response.text)
 
+cookie = response.cookies
+
 url = "https://apic/api/node/mo/uni/tn-Procurement.json"
 
 payload = "{\"fvTenant\":{\"attributes\":{\"dn\":\"uni/tn-Procurement\",\"name\":\"Procurement\",\"rn\":\"tn-Procurement\",\"status\":\"created\"},\"children\":[]}}"
@@ -21,6 +23,6 @@ headers = {
     'cache-control': "no-cache",
     }
 
-response = requests.request("POST", url, data=payload, cookie=response.cookie, verify=False, headers=headers)
+response = requests.request("POST", url, data=payload, cookie=cookie, verify=False, headers=headers)
 
 print(response.text)
