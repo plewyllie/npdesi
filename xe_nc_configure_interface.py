@@ -40,6 +40,7 @@ if __name__ == "__main__":
                 </config>
         """
 
+        print help(device)
         nc_reply = device.edit_config(target='running', config=nc_filter)
 
         get_filter = """
