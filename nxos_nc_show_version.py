@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
         ns_map = {'mod': 'http://www.cisco.com/nxos:1.0:vdc_mgr'}
         xml_rsp_cid = nc_get_reply.data_ele.find('.//mod:chassis_id', ns_map)
-        cid_value = xml_rsp_cid.tex
+        cid_value = xml_rsp_cid.text
         xml_rsp_sw = nc_get_reply.data_ele.find('.//mod:sys_ver_str', ns_map)
         sw_value = xml_rsp_sw.text
         print '================================='
